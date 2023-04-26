@@ -1,13 +1,116 @@
-@import '~@fluentui/react/dist/sass/References.scss';
+@import '~office-ui-fabric-react/dist/sass/References.scss';
 
-.chatgpt {
+.chatGpt {
   overflow: hidden;
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
+
   &.teams {
     font-family: $ms-font-family-fallbacks;
   }
+
+  /* Style for the chat container */
+  .chat-container {
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+
+  /* Style for individual chat messages */
+  .chat-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: beige;
+  }
+
+  /* Style for the user's own messages */
+  .chat-message.sent {
+    justify-content: flex-end;
+    background-color: #ddd;
+  }
+
+  /* Style for the message bubble */
+  .chat-message .message-bubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  /* Style for the timestamp */
+  .chat-message .timestamp {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #999;
+  }
+
+  /* Style for the avatar */
+  .avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* Style for the input field */
+  .chat-input {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Style for the input box */
+  .chat-input input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Style for the send button */
+  .chat-input button {
+    height: 100%;
+    width: 80px;
+    background-color: #0084ff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  // .chat-input button {
+  //   height: 40px;
+  //   width: 70px;
+  //   background-color: #0084ff;
+  //   color: #fff;
+  //   border: none;
+  //   font-size: 16px;
+  //   font-weight: bold;
+  //   text-transform: uppercase;
+  //   border-radius: 5px;
+  //   cursor: pointer;
+  //   transition: all 0.2s ease-in-out;
+  // }
+  
+  .chat-input button:hover {
+    background-color: #006fcc;
+    transform: scale(1.05);
+  }
+
 }
 
 .welcome {
