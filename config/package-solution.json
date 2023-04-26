@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-chatgpt-customds-client-side-solution",
+    "id": "e6a77b09-c99c-4bb8-916b-42e2a0784cb9",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-chatgpt-customds description"
+      },
+      "longDescription": {
+        "default": "spfx-chatgpt-customds description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-chatgpt-customds Feature",
+        "description": "The feature that activates elements of the spfx-chatgpt-customds solution.",
+        "id": "cecbc7d1-48d1-45b0-9789-c31699d4aa68",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-chatgpt-customds.sppkg"
+  }
+}
