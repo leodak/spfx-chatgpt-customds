@@ -1,6 +1,6 @@
 import { WebPartContext } from "@microsoft/sp-webpart-base";
 
-export interface IChatGptProps {
+export interface IChatgptProps {
   description: string;
   isDarkTheme: boolean;
   environmentMessage: string;

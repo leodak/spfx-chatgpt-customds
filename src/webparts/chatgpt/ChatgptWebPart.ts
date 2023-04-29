@@ -5,12 +5,12 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart, WebPartContext } from '@microsoft/sp-webpart-base';
+import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'ChatGptWebPartStrings';
-import ChatGpt from './components/ChatGpt';
-import { IChatGptProps } from './components/IChatGptProps';
+import * as strings from 'ChatgptWebPartStrings';
+import ChatGpt from './components/Chatgpt';
+import { IChatgptProps } from './components/IChatgptProps';
 
 export interface IChatGptWebPartProps {
   description: string;
@@ -22,7 +22,7 @@ export default class ChatGptWebPart extends BaseClientSideWebPart<IChatGptWebPar
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IChatGptProps> = React.createElement(
+    const element: React.ReactElement<IChatgptProps> = React.createElement(
       ChatGpt,
       {
         description: this.properties.description,

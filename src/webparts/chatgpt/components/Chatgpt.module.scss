@@ -1,6 +1,6 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
-.chatGpt {
+.chatgpt {
   overflow: hidden;
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
@@ -11,7 +11,7 @@
   }
 
   /* Style for the chat container */
-  .chat-container {
+  .chatContainer {
     height: 500px;
     width: 100%;
     background-color: #fff;
@@ -19,7 +19,7 @@
   }
 
   /* Style for individual chat messages */
-  .chat-message {
+  .chatMessage {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,20 +28,20 @@
   }
 
   /* Style for the user's own messages */
-  .chat-message.sent {
+  .chatMessage.sent {
     justify-content: flex-end;
     background-color: #ddd;
   }
 
   /* Style for the message bubble */
-  .chat-message .message-bubble {
+  .chatMessage .messageBubble {
     max-width: 70%;
     padding: 10px;
     border-radius: 10px;
   }
 
   /* Style for the timestamp */
-  .chat-message .timestamp {
+  .chatMessage .timestamp {
     font-size: 12px;
     margin-left: 10px;
     color: #999;
@@ -62,7 +62,7 @@
   }
 
   /* Style for the input field */
-  .chat-input {
+  .chatInput {
     height: 50px;
     width: 100%;
     display: flex;
@@ -73,7 +73,7 @@
   }
 
   /* Style for the input box */
-  .chat-input input {
+  .chatInput input {
     flex: 1;
     height: 100%;
     border: none;
@@ -82,7 +82,7 @@
   }
 
   /* Style for the send button */
-  .chat-input button {
+  .chatInput button {
     height: 100%;
     width: 80px;
     background-color: #0084ff;
@@ -106,7 +106,7 @@
   //   transition: all 0.2s ease-in-out;
   // }
   
-  .chat-input button:hover {
+  .chatInput button:hover {
     background-color: #006fcc;
     transform: scale(1.05);
   }
