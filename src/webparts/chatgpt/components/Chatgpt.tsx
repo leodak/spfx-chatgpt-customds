@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './Chatgpt.module.scss';
 import { IChatGPTState, IChatgptProps } from './IChatgptProps';
 import { IIconProps } from 'office-ui-fabric-react/lib/Icon';
-import { IconButton, TextField, Icon } from 'office-ui-fabric-react';
+import { IconButton, TextField } from 'office-ui-fabric-react';
 import { HttpClient, HttpClientResponse, IHttpClientOptions } from '@microsoft/sp-http';
 
 export default class Chatgpt extends React.Component<IChatgptProps, IChatGPTState> {
@@ -18,7 +18,7 @@ export default class Chatgpt extends React.Component<IChatgptProps, IChatGPTStat
       wpContext
     } = this.props;
 
-    const URL = "https://localhost:3000/search";
+    //const URL = this.props.apiURL;
     const body: string = JSON.stringify({
       'q': this.state.question,
       'rows': 1
@@ -71,7 +71,7 @@ export default class Chatgpt extends React.Component<IChatgptProps, IChatGPTStat
         chatContainer[0].appendChild(msgElem);
       }
       wpContext.httpClient.post(
-        URL, HttpClient.configurations.v1, httpClientOptions
+        this.props.apiURL, HttpClient.configurations.v1, httpClientOptions
       )
         .then((response: HttpClientResponse) => {
           return response.json();
@@ -90,20 +90,7 @@ export default class Chatgpt extends React.Component<IChatgptProps, IChatGPTStat
     return (
       <section className={`${styles.chatgpt} ${hasTeamsContext ? styles.teams : ''}`}>
         <div className={styles.chatContainer}>
-          <div className={styles.chatMessage}>
-            <div className={styles.avatar}>
-              <Icon iconName="FollowUser" />
-            </div>
-            <div className={styles.messageBubble}>Chat app html and css example with user avatar</div>
-            <div className={styles.timestamp}>2:30 PM</div>
-          </div>
-          <div className={`${styles.chatMessage} ${styles.sent}`}>
-            <div className={styles.avatar}>
-              <Icon iconName="LeaveUser" />
-            </div>
-            <div className={styles.messageBubble}>In this example, each chat message contains an avatar element and a message element.</div>
-            <div className={styles.timestamp}>2:31 PM</div>
-          </div>
+        
         </div>
         <div className={styles.chatInput}>
           <TextField onChange={saveQuestion} />

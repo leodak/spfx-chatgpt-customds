@@ -13,7 +13,7 @@ import ChatGpt from './components/Chatgpt';
 import { IChatgptProps } from './components/IChatgptProps';
 
 export interface IChatGptWebPartProps {
-  description: string;
+  apiURL: string;
 }
 
 export default class ChatGptWebPart extends BaseClientSideWebPart<IChatGptWebPartProps> {
@@ -25,7 +25,7 @@ export default class ChatGptWebPart extends BaseClientSideWebPart<IChatGptWebPar
     const element: React.ReactElement<IChatgptProps> = React.createElement(
       ChatGpt,
       {
-        description: this.properties.description,
+        apiURL: this.properties.apiURL,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
@@ -88,7 +88,7 @@ export default class ChatGptWebPart extends BaseClientSideWebPart<IChatGptWebPar
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
+                PropertyPaneTextField('apiURL', {
                   label: strings.DescriptionFieldLabel
                 })
               ]
