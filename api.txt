@@ -1,1 +1,2 @@
 https://node-js-post-gres.vercel.app/search
+https://node-js-post-gres.vercel.app/getsearch?q="give me a summary"&r=1
