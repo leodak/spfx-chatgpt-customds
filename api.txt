@@ -1,2 +1,3 @@
 POST - https://node-js-post-gres.vercel.app/search
 GET - https://node-js-post-gres.vercel.app/getsearch?q="give me a summary"&r=1
+this works for me (Arun) - https://node-js-post-gres.vercel.app/getsearch?q=%22give%20me%20a%20summary%22&r=1
